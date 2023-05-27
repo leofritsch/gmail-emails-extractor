@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Gmail Emails Extractor",
+    "version": "1.0",
+    "description": "Scrapes emails and names from the gmail conversations",
+    "permissions": [
+        "activeTab",
+        "clipboardWrite"
+    ],
+    "host_permissions": [
+        "https://mail.google.com/"
+    ],
+    "action": {},
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["content.js"]
+        }
+      ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "48": "love_48.png",
+        "128": "love_128.png"
+    }
+}
